@@ -4,127 +4,91 @@ const { User, Product, Category } = require('../models');
 db.once('open', async () => {
   await Category.deleteMany();
 
-  const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
-  ]);
+  // // const categories = await Category.insertMany([
+  // //   { name: 'Food' },
+  // //   { name: 'Household Supplies' },
+  // //   { name: 'Electronics' },
+  // //   { name: 'Books' },
+  // //   { name: 'Toys' }
+  // // ]);
 
-  console.log('categories seeded');
+  // console.log('categories seeded');
 
   await Product.deleteMany();
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Umbrella Hat',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
-      category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+        'This fun umbrella hat use very little space for portable travel.Stylish and functional accessories, practical design keeps you dry while keeping your hands free',
+      image: 'xxxxxx',
+      //category: categories[0]._id,
+      price: 12.99,
+      },
+    {
+      name: 'Bacon Strips Bandages',
+      description:
+        'Ouch! That smarts! Treat your minor cuts, scrapes and scratches with the incredible healing power of meat',
+      image: 'xxxxxxx',
+      //category: categories[0]._id,
+      price: 6.79,
     },
     {
-      name: 'Canned Coffee',
+      name: 'Car French Fry Holder',
+      //category: categories[1]._id,
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
-      category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+        'This tray slides into your cup holder to secure french fry cartons that normally do not fit properly. Respect where respect is due.',
+      image: 'xxxxxx',
+      price: 8.95,
     },
     {
-      name: 'Toilet Paper',
-      category: categories[1]._id,
+      name: 'American Mullet Socks ',
+      //category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
+        'MULLET SOCKS GO WITH EVERYTHING Like a real mullet, these fake mullet hair socks go with everything. Suit and tie? Yoga pants and hoodie? Check and check! Mullet Socks are always the perfect fit for any look!',
+      image: 'XXXX',
+      price: 11.99 ,
     },
     {
-      name: 'Handmade Soap',
-      category: categories[1]._id,
+      name: 'The Official BS Button',
+      //category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+        'This straight talking BS Button allows you to call BS whenever you see it! Simply press the red buzzer to make it light up, buzz loudly and announce, That was BS! or shout, BS detected, take precautions! over a wailing siren.',
+      image: 'XXXXX',
+      price: 12.15,
     },
     {
-      name: 'Set of Wooden Spoons',
-      category: categories[1]._id,
+      name: ':Chia Pet Bob Ross ',
+      //category: categories[2]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
+        'FULL GROWTH 1-2 WEEKS: In just a few short weeks your chia pet will achieve maximum growth and enjoy a luscious green coat.',
+      image: 'xxxx',
+      price: 19.99,
     },
     {
-      name: 'Camera',
-      category: categories[2]._id,
+      name: 'Emergency Underpants',
+     // category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
+        'The Emergency Underpants come in a 3" x 1-1/2" x 3/4" tin and contain one pair of disposable unisex underpants.Fits most adults.',
+      image: 'xxxxxx',
+      price: 6.17,
     },
     {
-      name: 'Tablet',
-      category: categories[2]._id,
+      name: ':Ostrichpillow ',
+      //category: categories[3]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
+        ' DREAM IN STYLE | The revolutionary sensation OSTRICHPILLOW ORIGINAL is the ultimate immersive travel pillow! Use it for a power nap, lounging at home, or wherever you may be, without moving an inch. Just slip it on and you are off to dreamland.',
+      image: 'xxxxxx',
+      price: 98.00,
     },
     {
-      name: 'Tales at Bedtime',
-      category: categories[3]._id,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
+      name: 'Viking Steel Pizza',
+      //category: categories[4]._id,
+      description: 'CUT YOUR PIZZA LIKE A KING : Just a single glance is enough to see why our pizza axes are miles ahead of your competitors!',
+      image: 'xxxx',
+      price: 129.95,
     },
-    {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
-      description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
-    },
-    {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
-      description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
-    }
-  ]);
+   ]);
 
   console.log('products seeded');
 
