@@ -98,7 +98,7 @@ function Detail() {
               disabled={!cart.find((p) => p._id === currentProduct._id)}
               onClick={removeFromCart}
             >
-              Remove from Rigadoo
+              Remove from Cart
             </button>
           </p>
 
