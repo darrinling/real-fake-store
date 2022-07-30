@@ -6,11 +6,11 @@ db.once("open", async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: "Food" },
-    { name: "Household Supplies" },
-    { name: "Electronics" },
-    { name: "Books" },
-    { name: "Toys" },
+    { name: "Planetary Needs" },
+    { name: "Spaceship Supplies" },
+    // // { name: "Basic" },
+    // { name: "Communications" },
+    // { name: "Just for fun" },
   ]);
 
   console.log("categories seeded");
@@ -19,9 +19,9 @@ db.once("open", async () => {
 
   const products = await Product.insertMany([
     {
-      name: "Umbrella Hat",
+      name: "Orbital debris Protector",
       description:
-        "This fun umbrella hat use very little space for portable travel.Stylish and functional accessories, practical design keeps you dry while keeping your hands free",
+        "This orbital debris hat protects you from flying debris off meteorites",
       image: "umbrellahat.jpg",
       category: categories[0]._id,
       price: 12.99,
@@ -29,23 +29,23 @@ db.once("open", async () => {
     {
       name: "Bacon Strips Bandages",
       description:
-        "Ouch! That smarts! Treat your minor cuts, scrapes and scratches with the incredible healing power of meat",
+        "Bacon Strips Bandages will keep the hunger away when having to travel for several hours. One lick will kick the hunger pangs for up to 40 minutes",
       image: "bacon-bandages.webp",
       category: categories[1]._id,
       price: 6.79,
     },
     {
-      name: "Car French Fry Holder",
+      name: "Spaceship French Fry Holder",
       description:
-        "This tray slides into your cup holder to secure french fry cartons that normally do not fit properly. Respect where respect is due.",
+        "This tray slides into your spaceships cup holder to secure french fry cartons and keeps them from floating away with our gravitational force technology, those fries won't float away from you.",
       image: "fries.jpg",
       category: categories[0]._id,
       price: 8.95,
     },
     {
-      name: "American Mullet Socks ",
+      name: "Scroggy Socks ",
       description:
-        "MULLET SOCKS GO WITH EVERYTHING Like a real mullet, these fake mullet hair socks go with everything. Suit and tie? Yoga pants and hoodie? Check and check! Mullet Socks are always the perfect fit for any look!",
+        "SCROGGY SOCKS! Tired of scroggies nipping at your heals? These scroggy socks will deter those little critters with its innovative technology so you can walk around your ship or planet without severe scroggy bites!",
       image: "mullet.jpg",
       category: categories[1]._id,
       price: 11.99,
@@ -53,15 +53,15 @@ db.once("open", async () => {
     {
       name: "The Official BS Button",
       description:
-        "This straight talking BS Button allows you to call BS whenever you see it! Simply press the red buzzer to make it light up, buzz loudly and announce, That was BS! or shout, BS detected, take precautions! over a wailing siren.",
+        "This straight talking BS Button allows you to send BS to other ships whenever you see it!",
       image: "bullshit.jpg",
       category: categories[0]._id,
       price: 12.15,
     },
     {
-      name: ":Chia Pet Bob Ross ",
+      name: "Chia Pet Bob Ross ",
       description:
-        "FULL GROWTH 1-2 WEEKS: In just a few short weeks your chia pet will achieve maximum growth and enjoy a luscious green coat.",
+        "The Chia pet's luscious green coat can absorb foul odors, so go ahead and it one rip.",
       image: "chiapet.jpg",
       category: categories[1]._id,
       price: 19.99,
@@ -69,23 +69,23 @@ db.once("open", async () => {
     {
       name: "Emergency Underpants",
       description:
-        'The Emergency Underpants come in a 3" x 1-1/2" x 3/4" tin and contain one pair of disposable unisex underpants.Fits most adults.',
+        'The Emergency Underpants are perfect for travel and are compact enough to bring anywhere on your ship or planetary stops.',
       image: "underpants.jpg",
       category: categories[0]._id,
       price: 6.17,
     },
     {
-      name: ":Ostrichpillow ",
+      name: "The Sleep Inducer",
       description:
-        " DREAM IN STYLE | The revolutionary sensation OSTRICHPILLOW ORIGINAL is the ultimate immersive travel pillow! Use it for a power nap, lounging at home, or wherever you may be, without moving an inch. Just slip it on and you are off to dreamland.",
+        "Perfect for inducing sleep even when you're not sleepy. Great for shutting up the prisoners on your ship too! Buy plenty for all.",
       image: "pillow.jpg",
       category: categories[0]._id,
       price: 98.0,
     },
     {
-      name: "Viking Steel Pizza",
+      name: "Viking Steel Slicer",
       description:
-        "CUT YOUR PIZZA LIKE A KING : Just a single glance is enough to see why our pizza axes are miles ahead of your competitors!",
+        "Great for slicing pizza but can be used for slicing just about anything, alien limbs, scroggies, and so much more!",
       image: "pizzaaxe.webp",
       category: categories[0]._id,
       price: 129.95,

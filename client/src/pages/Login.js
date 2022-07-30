@@ -36,7 +36,7 @@ function Login(props) {
       <h2>Login</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email">Intergalatic communication email:</label>
           <input
             placeholder="youremail@test.com"
             name="email"
@@ -46,7 +46,7 @@ function Login(props) {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="pwd">Multipass ID:</label>
           <input
             placeholder="******"
             name="password"
@@ -57,7 +57,7 @@ function Login(props) {
         </div>
         {error ? (
           <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+            <p className="error-text">You cannot enter the portal with those credentials</p>
           </div>
         ) : null}
         <div className="flex-row flex-end">
