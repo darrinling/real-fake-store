@@ -57,7 +57,7 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Intergalatic Communications Email:</label>
           <input
             placeholder="youremail@test.com"
             name="email"
@@ -67,7 +67,7 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="pwd">Multipass ID:</label>
           <input
             placeholder="******"
             name="password"
