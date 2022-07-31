@@ -10,6 +10,7 @@ import { setContext } from "@apollo/client/link/context";
 import WithNav from "./WithNav";
 import WithoutNav from "./WithoutNav";
 
+import Contact from "./pages/Contact";
 import Welcome from "./pages/Welcome";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
@@ -51,6 +52,7 @@ function App() {
                 <Route path="/" element={<Welcome />} />
               </Route>
               <Route element={<WithNav />}>
+                <Route path="/Contact" element={<Contact />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
