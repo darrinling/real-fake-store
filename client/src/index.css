@@ -1,10 +1,12 @@
-:root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+:root { 
+  background-color: #2b4162;
+  background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%); 
+  --primary: #3c5472;
+  --secondary: #5bf347;
+  --tertiary: #26b8ee;
   --light: #fafafa;
-  --dark: #272f32;
-  --error: rgb(228, 46, 1);
+  --dark: #26b8ee;
+  --error: #2104b1;
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
 }
@@ -141,6 +143,7 @@ input:focus {
   margin-right: auto;
 }
 
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -208,3 +211,4 @@ input:focus {
     width: 100%;
   }
 }
+

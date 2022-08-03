@@ -14,6 +14,8 @@ import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
+import StarfieldAnimation from 'react-starfield-animation';
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -86,7 +88,15 @@ function Detail() {
       {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
-
+          <StarfieldAnimation
+      style={{
+        position: 'fixed',
+        width: '100%',
+        height: '100%',
+        zIndex: '-1',
+        pointerEvent: 'none'
+      }}
+     />
           <h2>{currentProduct.name}</h2>
 
           <p>{currentProduct.description}</p>
