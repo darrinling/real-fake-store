@@ -16,5 +16,9 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "react-star-sky": "^1.0.0",
+    "react-starfield-animation": "^1.0.1"
   }
 }
