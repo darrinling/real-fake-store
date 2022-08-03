@@ -9,11 +9,11 @@ const Welcome = () => {
         <source src={backgroundVideo} type="video/mp4" />
       </video>
 
-      <div class="welcomeFlex">
-        <h1 class="logo">
-          REAL <span class="logoLight">FAKE</span> STORE
+      <div className="welcomeFlex">
+        <h1 className="logo">
+          REAL <span className="logoLight">FAKE</span> STORE
         </h1>
-        <h2 class="subLogo">INTERDIMENSIONAL BODEGA</h2>
+        <h2 className="subLogo">INTERDIMENSIONAL BODEGA</h2>
         <Link id="neonGlow" to="/home">
           ENGAGE WARP DRIVE
         </Link>
