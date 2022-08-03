@@ -69,7 +69,7 @@ db.once("open", async () => {
     {
       name: "Emergency Underpants",
       description:
-        'The Emergency Underpants are perfect for travel and are compact enough to bring anywhere on your ship or planetary stops.',
+        "The Emergency Underpants are perfect for travel and are compact enough to bring anywhere on your ship or planetary stops.",
       image: "underpants.jpg",
       category: categories[0]._id,
       price: 6.17,
