@@ -18,6 +18,8 @@
     "react-scripts": "4.0.2"
   },
   "scripts": {
+    "inaiastart": "react-scripts --openssl-legacy-provider start",
+    "inaiabuild":"react-scripts --openssl-legacy-provider build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
