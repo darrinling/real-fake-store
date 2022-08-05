@@ -20,10 +20,8 @@
 
 ## Description
 
-```md
 A place for intergalactic travelers to find the products they need to keep sane on their long journeys through space. Whether they want something unique or something real fake, the real fake store has it all. Our application is web responsive, easily visible on a mobile device or from your spaceship’s console. 
 
-```
 ## Heroku Link
 Check out our [Deployed Link!](https://real-fake-store.herokuapp.com/) :rocket:
 
