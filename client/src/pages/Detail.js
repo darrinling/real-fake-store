@@ -87,7 +87,7 @@ function Detail() {
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
-          <Link to="/">← Back to Products</Link>
+          <Link to="/home">← Back to Products</Link>
           <StarfieldAnimation
       style={{
         position: 'fixed',
