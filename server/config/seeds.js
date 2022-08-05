@@ -19,7 +19,7 @@ db.once("open", async () => {
 
   const products = await Product.insertMany([
     {
-      name: "Orbital debris Protector",
+      name: "Orbital Debris Protector",
       description:
         "This orbital debris hat protects you from flying debris off meteorites",
       image: "umbrellahat.jpg",

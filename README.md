@@ -41,7 +41,7 @@ Then run the command: npm run develop
 
 
 ## Images
-![RealFakeGIF](client/build/images/project3.gif)
+![RealFakeGIF](project3.gif)
 
 
 ### Questions:
